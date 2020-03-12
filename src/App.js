@@ -15,7 +15,7 @@ function App() {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/register" component={About} />
+          <Route path="/Register" component={About} />
         </Switch>
       </Router>
     </React.Fragment>
