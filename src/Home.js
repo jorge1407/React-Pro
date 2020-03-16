@@ -10,13 +10,22 @@ const GridWrapper = styled.div`
   margin-right: 6em;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(25px, auto);
-`;
+
+  .loginText{
+    width=75%;
+    height:70%;
+  }
+
+`
+  
+;
 export const Home = props => (
   <GridWrapper>
     <Form>
-      <Form.Group controlId="formGroupEmail">
+      <h1>LOGIN</h1>
+      <Form.Group  controlId="formGroupEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control  type="email" placeholder="Enter email" />
       </Form.Group>
       <Form.Group controlId="formGroupPassword">
         <Form.Label>Password</Form.Label>
