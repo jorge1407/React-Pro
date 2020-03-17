@@ -1,12 +1,10 @@
 const express =  require("express")
-const users = express.Router()
+const user = express.Router()
 const cors = require("cors")
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
 
-//
-
-
+// Creamos user.post ~ REGISTER
 const User = require("../models/User")
 users.use(cors())
 

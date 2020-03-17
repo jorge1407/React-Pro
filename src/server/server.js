@@ -1,7 +1,11 @@
+//Generar la URl de manera mas sencilla
 var express = require("express")
+//Metodos de HTTP y permisos
 var cors = require("cors")
+
 var bodyParser = require("body-parser")
 var app = express()
+//Pquete en NodeJS para tranajar con MongoDB
 var mongoose = require("mongoose")
 var port = process.env.PORT || 5000
 
@@ -20,9 +24,9 @@ mongoose
 .then(() => console.log("MongoDB conectado"))
 .catch(err =>console.log(err))
 
-var Users = require('./routes/Users')
+var User = require('./routes/User')
 
-app.use('/users', Users)
+app.use('/user', User)
 
 app.listen(port, () =>{
     console.log("Servidor activo en el puerto: "+ port)
