@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-export const register =  new newUser => {
+export const register = newUser => {
         return axios
         .post('/user/register',{
             nombre: newUser.nombre,
             apellido: newUser.apellido,
             email: newUser.email,
-            password: newUser.password,
+            password: newUser.password
         })
         .then(res =>{
             console.log('Registrado')
@@ -27,4 +27,3 @@ export const register =  new newUser => {
         })
     }
 
-ex

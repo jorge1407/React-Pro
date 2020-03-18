@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import {Link, withRouter} from 'react-router-dom'
-import { ListGroup } from 'react-bootstrap'
 
 
-class Navbar extends Component{
-    logOut(e){
-        e.preventDefault()
-        localStorage.removeItem('usertoken')
-        this.props.history.push('/')
+class Launcher extends Component {
+    logOut(e) {
+      e.preventDefault()
+      localStorage.removeItem('usertoken')
+      this.props.history.push(`/`)
     }
 
     render(){
@@ -27,18 +26,18 @@ class Navbar extends Component{
         )
         const userLink = (
             <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link to="/profile" className="nav-link">
-                    User              
-                 </Link>  
-                </li>
-                <li className="nav-item">
-                  <a href="" onClick={this.logOut.bind(this)} className="nav-link">
-                      LogOut
-                  </a>
-                </li>
-           </ul>
-        )
+              <li className="nav-item">
+                <Link to="/profile" className="nav-link">
+                  User
+                </Link>
+              </li>
+              <li className="nav-item">
+                <a href="" onClick={this.logOut.bind(this)} className="nav-link">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          )
     
     return(
             <nav className="nav.navbar.navbar-expand-Lg.navbar.bg-dark rounded">
@@ -48,7 +47,7 @@ class Navbar extends Component{
                 data-target="#navbar1"
                 aria-controls="navbar1"
                 aria-expanded="false"
-                aria-lable="Toggle navigation">
+                aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>     
                 </button>
 
@@ -66,4 +65,4 @@ class Navbar extends Component{
         )
     } 
 }
-export default withRouter(Navbar)
+export default withRouter(Launcher)

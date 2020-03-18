@@ -12,3 +12,4 @@ class Launcher extends Component{
         )
     }
 }
+export default Launcher

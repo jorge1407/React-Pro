@@ -1,5 +1,5 @@
-import React from 'react';
-import{BrowserRouter as Router, Router} from 'react-router-dom'
+import React, { Component } from 'react';
+import{BrowserRouter as Router, Route} from 'react-router-dom'
 
 import Navbar from './components/NavBar'
 import Launcher from './components/Launcher'
@@ -9,21 +9,23 @@ import Profile from './components/Profile'
 
 
 
-function App() {
+class App extends Component {
+  render(){
   return (
     <Router>
       <div className="App">
         <Navbar/>
         <Router exact path="/" component={Launcher}/>
         <div className="container">
-          <Router exact path="/register" component={Register}/>
-          <Router exact path="/login" component={Login}/>
+          <Route exact path="/register" component={Register}/>
+          <Route exact path="/login" component={Login}/>
           <Router exact path="/profile" component={Profile}/>
         </div>
       </div>
 
     </Router>
   );
+}
 }
 
 export default App;
